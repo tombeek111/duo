@@ -1,0 +1,110 @@
+{
+    "money_per_duolingo_xp" : 10,
+    "initial_money" : 100,
+    "pet_score" : 5,
+    "prices" : {
+        "vet" : 50
+    },
+    "time" : {
+        "hatching": 600,
+        "restart" : 60,
+        "mood_print" : 9000,
+        "hourly_update" : 7200
+    },
+    "hourly" : {
+        "happy_reduction" : 3,
+        "food_reduction" : 4,
+        "love_reduction" : 0,
+        "bored_reduction" : 10,
+        "sickness_chance" : 0.02
+    },
+    "toys" : {
+        "stuffed_animal" : {
+            "name" : "stuffed animal",
+            "price" : 1000,
+            "score" : 50
+        },
+        "bone" : {
+            "name" : "bone",
+            "price" : 100,
+            "score" : 10
+        },
+        "ball" : {
+            "name" : "ball",
+            "price" : 500,
+            "score" : 25
+        },
+        "lottery_ticket" : {
+            "name" : "lottery ticket",
+            "price" : 50,
+            "score" : 10
+        },
+        "frisbee" : {
+            "name" : "frisbee",
+            "price" : 2000,
+            "score" : 100
+        },
+        "bottle" : {
+            "name" : "bottle",
+            "price" : 25,
+            "score" : 5
+        },
+        "sock" : {
+            "name" : "sock",
+            "price" : 40,
+            "score" : 10
+        }
+    },
+    "foods" : {
+        "cookie" : {
+            "name" : "cookie",
+            "price" : 60,
+            "score" : 10
+        },
+        "peanut" : {
+            "name" : "peanut",
+            "price" : 60,
+            "score" : 10
+        },
+        "can" : {
+            "name" : "canned food",
+            "price" : 300,
+            "score" : 50
+        },
+        "falafel" : {
+            "name" : "falafel",
+            "price" : 300,
+            "score" : 50
+        },
+        "dry" : {
+            "name" : "dry food",
+            "price" : 180,
+            "score" : 30
+        },
+        "bread" : {
+            "name" : "bread",
+            "price" : 180,
+            "score" : 30
+        },
+        "steak" : {
+            "name" : "steak",
+            "price" : 500,
+            "score" : 100
+        }
+    },
+    "medicin" : {
+        "stomach_pills" : {
+            "name" : "stomach pills",
+            "price" : 250
+        },
+        "cough_sirop" : {
+            "name" : "couch_sirop",
+            "price" : 500
+        },
+        "antibiotics" : {
+            "name" : "antibiotics",
+            "price" : 500
+        }
+    }
+
+}
