@@ -39,18 +39,20 @@ if online:
     pass
     controller.chat_id = config['chat_id']
     
-    if '-sayhi' in args:
-        controller.echo('connection successfull')
+    
         
     try:
+        controller.online_listener()
+            if '-sayhi' in args:
+                controller.echo('connection successfull')
+                
         if '-newgame' in args:
-            controller.online_listener()
             game.new_game()
-            controller.updater.idle()
         else:
-            controller.online_listener()
             game.load_game()
-            controller.updater.idle()
+        
+        
+        controller.updater.idle()
         
         
     except KeyboardInterrupt:
