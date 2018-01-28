@@ -30,11 +30,18 @@ class User:
             found = False
             if r.status_code == 200:
                 data = r.json()
+                courses = None
                 if 'courses' in data:
-                    for course in data['courses']:
+                    courses = data['courses']
+                elif 'users' in data:
+                    courses = data['users'][0]['courses']
+                
+                if courses is not None:
+                    for course in courses:
                         if course['id'] == self.language:
                             found = True
                             xp = course['xp']
+                    
         except Exception:
             found = False
         if found:
