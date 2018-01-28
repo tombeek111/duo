@@ -43,8 +43,8 @@ if online:
         
     try:
         controller.online_listener()
-            if '-sayhi' in args:
-                controller.echo('connection successfull')
+        if '-sayhi' in args:
+            controller.echo('connection successfull')
                 
         if '-newgame' in args:
             game.new_game()
