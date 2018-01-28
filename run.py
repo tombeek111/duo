@@ -1,7 +1,13 @@
 from game import game
 from user import User
 from config import config
+import sys
+import os
 
+args = sys.argv
+
+    
+    
 game.create_objects()
 
 controller = game.controller
@@ -35,10 +41,14 @@ if online:
     controller.chat_id = config['chat_id']
     
     try:
-        controller.online_listener()
-        #game.new_game()
-        game.load_game()
-        controller.updater.idle()
+        if '-newgame' in args:
+            controller.online_listener()
+            game.new_game()
+            controller.updater.idle()
+        else:
+            controller.online_listener()
+            game.load_game()
+            controller.updater.idle()
         
         
     except KeyboardInterrupt:
