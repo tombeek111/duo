@@ -97,7 +97,7 @@ class Game():
         self.duo_checker.schedule(10)
        
     
-    def load_game(self):
+    def load_game(self,load_only = False):
         name = self.save_name
         print('loading game')
         
@@ -114,12 +114,13 @@ class Game():
         except Exception as e:
             loaded = False
         
-        if loaded:
-            self.init_pet()
-            print('game_loaded')
-        else:
-            self.new_game()
-            print('new game')
+        if not load_only:
+            if loaded:
+                self.init_pet()
+                print('game_loaded')
+            else:
+                self.new_game()
+                print('new game')
         
     
     def save_game(self):
