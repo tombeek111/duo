@@ -36,8 +36,12 @@ game.user_manager.add_user(user2)
 controller.chat_id = config['chat_id']
 game.load_game(True)
 if '-sub_duo' in args:
-    user2.duolingo_xp -= 100
-
+    game.user_manager.users[1].duolingo_xp -= 10
+	
+if '-remove_money' in args:
+	game.user_manager.users[1].money -= 900
+	print('removed money')
+game.save_game()
 
 """
 pet = Pet()
