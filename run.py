@@ -2,7 +2,6 @@ from game import game
 from user import User
 from config import config
 import sys
-import os
 
 args = sys.argv
 
@@ -40,6 +39,9 @@ if online:
     pass
     controller.chat_id = config['chat_id']
     
+    if '-sayhi' in args:
+        controller.echo('connection successfull')
+        
     try:
         if '-newgame' in args:
             controller.online_listener()
