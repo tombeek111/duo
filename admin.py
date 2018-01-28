@@ -1,0 +1,53 @@
+from game import game
+from user import User
+from config import config
+import sys
+
+args = sys.argv
+
+    
+    
+game.create_objects()
+
+controller = game.controller
+controller.init()
+
+
+user1 = User()
+user1.name = 'Tom'
+user1.telegram_id = config['user1_id']
+user1.link = 'https://www.duolingo.com/2017-06-30/users/42447025?fields=courses'
+user1.language = 'DUOLINGO_UK_EN'
+game.user_manager.add_user(user1)
+
+user2 = User()
+user2.name = 'Ananas'
+user2.link = 'https://www.duolingo.com/2017-06-30/users?username=Anastasia130'
+user2.language = 'DUOLINGO_NL-NL_EN'
+game.user_manager.add_user(user2)
+
+#user1.duolingo_xp = 0
+#user2.duolingo_xp = 1
+#checker = DuolingoChecker([user1,user2])
+#ans = checker.check()
+#print(ans)
+#
+
+controller.chat_id = config['chat_id']
+game.load_game(True)
+if '-sub_duo' in args:
+    user2.duolingo_xp -= 100
+
+
+"""
+pet = Pet()
+pet.name = 'flaf'
+
+controller.pet = pet
+pet.c = controller
+
+controller.init()
+#controller.offline_listener()
+"""
+# -*- coding: utf-8 -*-
+
