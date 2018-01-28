@@ -22,7 +22,7 @@ game.user_manager.add_user(user1)
 
 user2 = User()
 user2.name = 'Ananas'
-user2.link = 'https://www.duolingo.com/2017-06-30/users/42447025?fields=courses'
+user2.link = 'https://www.duolingo.com/2017-06-30/users?username=Anastasia130'
 user2.language = 'DUOLINGO_NL-NL_EN'
 game.user_manager.add_user(user2)
 
