@@ -78,23 +78,23 @@ class Game():
         def hourly_update():
             self.pet.hourly_update()
             self.save_game()
-            #Set a bit of variation in the next hourly update
             self.scheduler.create_timed_event(self.settings.get_setting(['time','hourly_update']),hourly_update)
             
         def mood_print():
             
             update_time = round(self.settings.get_setting(['time','mood_update']) * (random.randint(80,120)/100))
-            
             if self.pet.sleeping == 0:
                 self.pet.mood_alert()
             self.scheduler.create_timed_event(update_time,mood_print)
             
         self.scheduler.create_timed_event(self.settings.get_setting(['time','hourly_update']),hourly_update)
         
+
         #Start duolingo checker
         import duolingo_checker as _duolingo_checker
         self.duo_checker = _duolingo_checker.DuolingoChecker(self.user_manager.users)
         self.duo_checker.schedule(10)
+        
        
     
     def load_game(self,load_only = False):

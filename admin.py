@@ -35,14 +35,28 @@ game.user_manager.add_user(user2)
 
 controller.chat_id = config['chat_id']
 game.load_game(True)
+
+if '-status' in args:
+    print('pet health',game.pet.health)
+    print('sleep',game.pet.sleeping)
+    print('ananas duo xp',game.user_manager.users[1].duolingo_xp)
+    print('ananas money',game.user_manager.users[1].money)
+	
+	
 if '-sub_duo' in args:
     game.user_manager.users[1].duolingo_xp -= 10
+    print('substracted 10 xp')
 	
 if '-remove_money' in args:
 	game.user_manager.users[1].money -= 900
 	print('removed money')
-game.save_game()
 
+if '-reset_duo' in args:
+    game.user_manager.users[1].link = 'https://www.duolingo.com/2017-06-30/users?username=Anastasia130'
+    game.user_manager.users[1].init_duolingo_xp()
+    print('duolingo reset')
+game.save_game()
+print('game saved')
 """
 pet = Pet()
 pet.name = 'flaf'
