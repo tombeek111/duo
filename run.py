@@ -33,6 +33,8 @@ game.user_manager.add_user(user2)
 #print(ans)
 #
 online = True
+if '-offline' in args:
+    online = False
 if online:
     
     
@@ -69,7 +71,8 @@ else:
     
     
     #controller.new_game()
-    controller.load_game('game.pkl')
+    controller.online = False
+    game.load_game()
     controller.offline_listener()
 
 

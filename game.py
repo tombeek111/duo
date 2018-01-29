@@ -2,6 +2,7 @@ import pickle
 import os
 import random
 
+
 class Game():
     
     def __init__(self):
@@ -82,11 +83,11 @@ class Game():
             
         def mood_print():
             
-            update_time = round(self.settings.get_setting(['time','mood_update']) * (random.randint(80,120)/100))
+            update_time = round(self.settings.get_setting(['time','mood_print']) * (random.randint(80,120)/100))
             if self.pet.sleeping == 0:
                 self.pet.mood_alert()
             self.scheduler.create_timed_event(update_time,mood_print)
-            
+        mood_print()
         self.scheduler.create_timed_event(self.settings.get_setting(['time','hourly_update']),hourly_update)
         
 

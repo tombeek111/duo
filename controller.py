@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from telegram.ext import CallbackQueryHandler,Updater,  MessageHandler, Filters
 from telegram import InlineKeyboardMarkup,InlineKeyboardButton
 import logging
@@ -247,8 +248,10 @@ class Controller:
     
         
     def change_title(self,title):
-        self.updater.bot.setChatTitle(self.chat_id,title)
-        
+        if self.online:
+            self.updater.bot.setChatTitle(self.chat_id,title)
+        else:
+            print('title changed')
         
     def request_choice(self,text,choices,proceed_function,current_user = True,add_cancel = True):
     

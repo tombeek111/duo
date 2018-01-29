@@ -193,16 +193,23 @@ class Pet:
                 msgs.append(''.format(self.name))
                 msgs.append(''.format(self.name))
         else:
+            username = random.choice(game.user_manager.users).name
             new_title = '(^‿^)'
             msgs.append('{0} keeps jumping around. He seems very happy'.format(self.name))
             msgs.append('{0} is taking a nap. He seems satisfied'.format(self.name))
             msgs.append('{0} loves {1} very much'.format(self.name,random.choice(game.user_manager.users).name))
+            msgs.append('{0} looks very happy'.format(self.name))
+            msgs.append('It seems that {0} is very comfortable'.format(self.name))
+            msgs.append('{0} is doing an impression of {0}. It is quite good'.format(self.name,username))
+            msgs.append('{0} likes {1}, and himself ofcourse.'.format(self.name,username))
         
         #%Add random
         if lowest_value >= 70 and True:
             msgs.append('Something breaks. {0} is looking guilty'.format(self.name))
             msgs.append('{0} has caught a bug! He seems very proud'.format(self.name))
             msgs.append('{0} decides he owns the fridge now'.format(self.name))
+            msgs.append('{0} has caught a fly. He gives it as a present to {1}'.format(self.name,random.choice(game.user_manager.users).name))
+            msgs.append('{0} is pretending to be an ananas'.format(self.name))
             
             
             
