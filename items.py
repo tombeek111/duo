@@ -27,7 +27,7 @@ class Toy(Item):
             game.pet.play(self.score,0)
             game.pet.increase_bored(self.name)
         else:
-            game.echo("%s refuses to play with a %s" % (game.pet.name,self.name))
+            game.controller.echo("%s refuses to play with a %s" % (game.pet.name,self.name))
 
 class Food(Item):
     def __init__(self):

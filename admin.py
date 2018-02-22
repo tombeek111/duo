@@ -2,8 +2,9 @@ from game import game
 from user import User
 from config import config
 import sys
-
+import random
 args = sys.argv
+from datetime import datetime
 
     
     
@@ -35,9 +36,12 @@ game.user_manager.add_user(user2)
 
 controller.chat_id = config['chat_id']
 game.load_game(True)
-
+print(random.choice(game.user_manager.users).name)
+now = datetime.now()
+print(now.hour)
 if '-status' in args:
     print('pet health',game.pet.health)
+    print('pet hunger',game.pet.food)
     print('sleep',game.pet.sleeping)
     print('ananas duo xp',game.user_manager.users[1].duolingo_xp)
     print('ananas money',game.user_manager.users[1].money)

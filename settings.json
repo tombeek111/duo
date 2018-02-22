@@ -9,7 +9,7 @@
         "hatching": 600,
         "restart" : 60,
         "mood_print" : 9000,
-        "hourly_update" : 7200
+        "hourly_update" : 10800
     },
     "hourly" : {
         "happy_reduction" : 3,
